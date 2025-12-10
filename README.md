@@ -1,12 +1,12 @@
 # Lexi.ai
 
-A smart AI-powered vocabulary tutor extension that helps you master new words through active usage and spaced repetition.
+An AI-powered vocabulary tutor extension that helps you master new words through active usage and spaced repetition.
 
 ## Features
 
 - **Active Learning**: Don't just memorize definitions. Write sentences using new words and get instant AI feedback.
 
-- **AI Evaluation**: Advanced AI rates your usage, provides corrections, and suggests better examples.
+- **AI Evaluation**: AI rates your usage, provides corrections, and suggests better examples.
 
 - **Spaced Repetition**: Built-in SRS (SM-2 algorithm) ensures you review words at the perfect time.
 
