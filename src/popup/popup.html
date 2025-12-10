@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lexi.ai</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="popup.css">
+</head>
+
+<body>
+  <div class="container">
+    <header>
+      <h1>Lexi.ai</h1>
+      <div class="header-actions">
+        <button id="theme-toggle" class="icon-btn" title="Toggle theme">🌙</button>
+        <nav>
+          <button id="tab-practice" class="active">Practice</button>
+          <button id="tab-words">Words</button>
+          <button id="tab-add">Add</button>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <!-- Practice View -->
+      <section id="view-practice" class="view active">
+        <div id="practice-empty" class="hidden">
+          <p>🎉</p>
+          <p class="subtext">No words due for review!<br>Add more words to keep learning.</p>
+        </div>
+
+        <div id="practice-content">
+          <div class="card">
+            <h2 id="target-word">...</h2>
+            <p class="hint">Write a sentence using this word.</p>
+
+            <!-- Definition Reveal -->
+            <button class="definition-toggle" id="reveal-definition">
+              <span>Show definition</span>
+            </button>
+            <div class="definition-content" id="definition-container">
+              <div class="definition-text" id="definition-display"></div>
+            </div>
+          </div>
+
+          <div class="input-area">
+            <textarea id="sentence-input" placeholder="Type your sentence here..."></textarea>
+          </div>
+
+          <div id="feedback-area" class="hidden">
+            <div class="score-container">
+              <div class="score-badge" id="score-badge">
+                <span id="score-value">0</span>
+              </div>
+              <div class="score-label">
+                <strong id="score-title">Score</strong>
+                out of 5
+              </div>
+            </div>
+            <p id="reasoning-text" class="reasoning"></p>
+            <p id="feedback-text"></p>
+            <div id="suggestions-container" class="hidden">
+              <p class="suggestions-header">Better examples:</p>
+              <ul id="suggestions-list"></ul>
+            </div>
+            <button id="next-btn">Next Word →</button>
+          </div>
+
+          <button id="check-btn" class="primary-btn">Check Sentence</button>
+        </div>
+      </section>
+
+      <!-- Add Word View -->
+      <section id="view-add" class="view">
+        <form id="add-word-form">
+          <div class="form-group">
+            <label for="word">Word</label>
+            <div class="input-with-button">
+              <input type="text" id="word" required placeholder="e.g. Serendipity">
+              <button type="button" id="lookup-btn" class="lookup-btn" title="Auto-fill definition">
+                🔍
+              </button>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="definition">Definition</label>
+            <textarea id="definition" required placeholder="Type a word above and click 🔍 to auto-fill..."></textarea>
+          </div>
+
+          <div class="form-group">
+            <label for="example">Example Sentence</label>
+            <textarea id="example" placeholder="Auto-filled when you look up a word..."></textarea>
+          </div>
+
+          <button type="submit" class="primary-btn">Save Word</button>
+        </form>
+      </section>
+
+      <!-- Words Library View -->
+      <section id="view-words" class="view">
+        <div class="search-bar">
+          <input type="text" id="word-search" placeholder="Search words...">
+        </div>
+        <div id="words-list" class="words-list"></div>
+        <div id="words-empty" class="hidden">
+          <p class="subtext">No words saved yet.<br>Add some words to get started!</p>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <!-- Toast Notification -->
+  <div id="toast" class="toast"></div>
+
+  <script type="module" src="popup.js"></script>
+</body>
+
+</html>
