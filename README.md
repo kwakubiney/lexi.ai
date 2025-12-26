@@ -1,4 +1,4 @@
-# Lexi.ai
+# Wordwright.ai
 
 A Chrome extension that helps you master vocabulary through active practice and spaced repetition.
 
@@ -6,6 +6,9 @@ A Chrome extension that helps you master vocabulary through active practice and 
 
 ### Word Collection
 - Add words manually or look up definitions with one click
+- Auto-fetch definitions from dictionary API
+- AI-generated example sentences when dictionary lacks them
+- Reject and edit auto-filled content if not helpful
 
 ### Practice Modes
 - **Production**: Write your own sentences using the word
@@ -30,18 +33,18 @@ A Chrome extension that helps you master vocabulary through active practice and 
 
 1. Download or clone this repository
    ```
-   git clone https://github.com/kwakubiney/lexi.ai.git
+   git clone https://github.com/kwakubiney/wordwright.git
    ```
 2. Open Chrome and go to `chrome://extensions`
 3. Enable "Developer mode" (toggle in top right)
 4. Click "Load unpacked"
-5. Select the `lexi.ai` folder
+5. Select the `wordwright` folder
 
 The extension icon will appear in your toolbar.
 
 ### Configure AI Provider
 
-1. Click the Lexi.ai icon, then the gear icon (Settings)
+1. Click the Wordwright.ai icon, then the gear icon (Settings)
 2. Choose your AI provider:
    - **OpenRouter** (cloud): Get a free API key at [openrouter.ai/keys](https://openrouter.ai/keys)
    - **Ollama** (local): Run `ollama serve` and click "Fetch Models"

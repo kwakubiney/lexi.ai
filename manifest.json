@@ -1,6 +1,6 @@
 {
     "manifest_version": 3,
-    "name": "Lexi.ai - AI Language Tutor",
+    "name": "Wordwright.ai - AI Vocabulary Tutor",
     "version": "1.1.0",
     "description": "Learn new words with AI-powered spaced repetition and feedback.",
     "permissions": [

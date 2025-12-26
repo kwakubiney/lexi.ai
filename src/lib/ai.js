@@ -72,8 +72,8 @@ async function callAI(messages, jsonMode = true) {
             headers: {
                 'Authorization': `Bearer ${config.openrouterKey}`,
                 'Content-Type': 'application/json',
-                'HTTP-Referer': 'https://lexi.ai',
-                'X-Title': 'Lexi.ai'
+                'HTTP-Referer': 'https://wordwright.ai',
+                'X-Title': 'Wordwright.ai'
             },
             body: JSON.stringify({
                 model: DEFAULT_OPENROUTER_MODEL,

@@ -7,7 +7,7 @@ const EVENING_ALARM = 'evening_reminder';
 const BADGE_ALARM = 'badge_update';
 
 chrome.runtime.onInstalled.addListener(() => {
-    console.log('Lexi.ai installed');
+    console.log('Wordwright.ai installed');
 
     // Badge update every hour
     chrome.alarms.create(BADGE_ALARM, { periodInMinutes: 60 });
@@ -18,15 +18,15 @@ chrome.runtime.onInstalled.addListener(() => {
 
     // Create context menu
     chrome.contextMenus.create({
-        id: "add-to-lexi",
-        title: "Add \"%s\" to Lexi",
+        id: "add-to-wordwright",
+        title: "Add \"%s\" to Wordwright",
         contexts: ["selection"]
     });
 });
 
 // Handle context menu clicks
 chrome.contextMenus.onClicked.addListener(async (info, tab) => {
-    if (info.menuItemId === "add-to-lexi" && info.selectionText) {
+    if (info.menuItemId === "add-to-wordwright" && info.selectionText) {
         let word = info.selectionText.trim();
         if (!word) return;
 
@@ -55,7 +55,7 @@ chrome.contextMenus.onClicked.addListener(async (info, tab) => {
                     type: 'basic',
                     iconUrl: 'src/assets/icon128.png',
                     title: 'Already saved',
-                    message: `"${word}" is already in your Lexi list.`,
+                    message: `"${word}" is already in your Wordwright list.`,
                     priority: 1
                 });
                 return;
